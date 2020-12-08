@@ -1,2 +1,2 @@
 # Veszelyes-Allatok
-uwuwuwuwuwuwu
+HTML Weboldal készítés meg talán Javascript is lol
