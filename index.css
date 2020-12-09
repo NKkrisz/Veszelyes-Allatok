@@ -11,9 +11,29 @@ body{
     background-color: rgb(226, 226, 226);
 }
 .menu-sandwich{
-    visibility: visible;
+    background-color: rgb(59, 59, 59);
+    display: none;
+    justify-content: space-between;
+}
+.menu-sandwich button{
+    background-color: transparent;
+    color: rgb(224, 224, 224);
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    border: 1px solid rgb(226, 226, 226);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    margin: 8px;
+}
+.menu-sandwich h3{
+    color: rgb(224, 224, 224);
+    margin: 13px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px ;
 }
 .menu{
+    visibility: visible;
     position: fixed;
     width: 250px;
     height: 100vh;
@@ -73,19 +93,23 @@ body{
 .content p{
     font-size: 30px;
 }
-
 @media (max-width: 900px){
     .menu{
         visibility: hidden;
     }
     .content{
         margin: 20px 20px 20px 20px;
+        max-width: calc(100vw - 40px);
+        max-height: 100vh;
     }
     body{
         display: block;
     }
     .menu-sandwich{
-        visibility: visible;
+        display: flex;
+    }
+    .menu h3{
+        visibility: hidden;
     }
 }
 
