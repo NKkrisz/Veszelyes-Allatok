@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: none;
+}
+body{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(226, 226, 226);
+}
+.menu{
+    position: fixed;
+    width: 250px;
+    height: 100vh;
+    background-color: rgb(59, 59, 59);
+    border-right: 1px solid rgb(226, 226, 226);
+}
+.menu h3{
+    color: rgb(224, 224, 224);
+    margin: 20px 0px 20px 32px;
+}
+.menu ul{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+}
+.menu-selected{
+    border-right: none !important;
+    border-radius: 10px 0px 0px 10px !important;
+    background-color: rgb(226, 226, 226) !important;
+    color: rgb(32, 32, 32) !important;
+    margin-right: 0 !important;
+    margin-left: 10% !important;
+}
+.menu ul button{
+    background-color: rgb(59, 59, 59);
+    border: 1px solid rgb(226, 226, 226);
+    border-radius: 10px;
+    color: rgb(224, 224, 224);
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.menu ul button:hover{
+    background-color: rgb(226, 226, 226) !important;
+    color: rgb(32, 32, 32) !important;
+    transition: 500ms;
+}
