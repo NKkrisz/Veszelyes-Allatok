@@ -10,6 +10,9 @@ body{
     margin: 0;
     background-color: rgb(226, 226, 226);
 }
+.menu-sandwich{
+    visibility: visible;
+}
 .menu{
     position: fixed;
     width: 250px;
@@ -69,6 +72,21 @@ body{
 }
 .content p{
     font-size: 30px;
+}
+
+@media (max-width: 900px){
+    .menu{
+        visibility: hidden;
+    }
+    .content{
+        margin: 20px 20px 20px 20px;
+    }
+    body{
+        display: block;
+    }
+    .menu-sandwich{
+        visibility: visible;
+    }
 }
 
 /* a nap commentje: az kom gec */
