@@ -20,6 +20,10 @@ body{
 .menu h3{
     color: rgb(224, 224, 224);
     margin: 20px 0px 20px 32px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 45px ;
+    text-align: center;
+    margin-left: auto;
 }
 .menu ul{
     list-style: none;
@@ -56,3 +60,11 @@ body{
     color: rgb(32, 32, 32) !important;
     transition: 500ms;
 }
+.content{
+    width: 100%;
+    height: 100%;
+    margin: 20px 20px 20px 270px;
+          /*top  right down  left*/
+}
+
+/* a nap commentje: az kom gec */
