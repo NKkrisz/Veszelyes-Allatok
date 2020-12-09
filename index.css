@@ -54,6 +54,7 @@ body{
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
+    transition: 500ms;
 }
 .menu ul button:hover{
     background-color: rgb(226, 226, 226) !important;
