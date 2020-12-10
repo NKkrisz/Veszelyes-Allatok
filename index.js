@@ -1,3 +1,13 @@
+window.addEventListener("resize", function(uwu){
+    menu = document.getElementsByClassName("menu")[0];
+    if(window.innerWidth > 900){
+        menu.style.visibility = "visible";
+    }
+    if(window.innerWidth <= 900){
+        menu.style.visibility = "hidden";
+    }
+});
+
 function switchTo(num){
     menuBtns = document.getElementsByClassName("menu-btn");
     pages = document.getElementsByClassName("content");

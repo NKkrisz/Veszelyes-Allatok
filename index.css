@@ -97,6 +97,7 @@ body{
 }
 .content p{
     font-size: 30px;
+    text-align: justify;
 }
 
 @media (max-width: 900px){
@@ -107,6 +108,9 @@ body{
         margin: 20px 20px 20px 20px;
         max-width: calc(100vw - 40px);
         max-height: 100vh;
+    }
+    .content img:nth-child(1){
+        width: calc(100vw - 50px);
     }
     body{
         display: block;
