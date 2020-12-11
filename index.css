@@ -48,6 +48,18 @@ body{
     background-color: rgb(59, 59, 59);
     border-right: 1px solid rgb(226, 226, 226);
     transition: 500ms;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    
+}
+.menu a{
+    text-decoration: none;
+    color: rgb(224, 224, 224);
+    padding-bottom: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.6vh;
 }
 .menu h3{
     color: rgb(224, 224, 224);
@@ -108,6 +120,7 @@ body{
 .content p{
     font-size: 30px;
     text-align: justify;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 @media (max-width: 900px){
@@ -132,5 +145,6 @@ body{
         padding-top: 70px;
     }
 }
+
 
 /* a nap commentje: az kom gec */
