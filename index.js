@@ -1,10 +1,10 @@
 window.addEventListener("resize", function(uwu){
     menu = document.getElementsByClassName("menu")[0];
     if(window.innerWidth > 900){
-        menu.style.visibility = "visible";
+        menu.style.margin = "0px";
     }
     if(window.innerWidth <= 900){
-        menu.style.visibility = "hidden";
+        menu.style.margin = "0px 0px 0px -250px";
     }
 });
 
@@ -25,10 +25,10 @@ function switchTo(num){
 
 function toggleMenu(){
     menu = document.getElementsByClassName("menu")[0];
-    if (menu.style.visibility == "visible"){
-        menu.style.visibility = "hidden";
+    if (menu.style.margin == "0px"){
+        menu.style.margin = "0px 0px 0px -250px";
     }else{
-        menu.style.visibility = "visible";
+        menu.style.margin = "0px";
     }
 };
 //haha javascript go brrr

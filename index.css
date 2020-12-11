@@ -8,9 +8,17 @@ body{
     display: flex;
     padding: 0;
     margin: 0;
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow-x: hidden;
     background-color: rgb(226, 226, 226);
 }
 .menu-sandwich{
+    position: fixed;
+    z-index: 99;
+    width: 99vw;
+    margin: 0;
+    padding: 0;
     background-color: rgb(59, 59, 59);
     display: none;
     justify-content: space-between;
@@ -33,12 +41,12 @@ body{
     font-size: 30px ;
 }
 .menu{
-    visibility: visible;
     position: fixed;
     width: 250px;
     height: 100vh;
     background-color: rgb(59, 59, 59);
     border-right: 1px solid rgb(226, 226, 226);
+    transition: 500ms;
 }
 .menu h3{
     color: rgb(224, 224, 224);
@@ -87,7 +95,7 @@ body{
 .content{
     width: 100%;
     height: 100%;
-    margin: 20px 20px 20px 270px;
+    padding: 20px 20px 20px 270px;
           /*top  right down left*/
 }
 .content img:nth-child(1){
@@ -101,11 +109,8 @@ body{
 }
 
 @media (max-width: 900px){
-    .menu{
-        visibility: hidden;
-    }
     .content{
-        margin: 20px 20px 20px 20px;
+        padding: 80px 20px 20px 20px;
         max-width: calc(100vw - 40px);
         max-height: 100vh;
     }
@@ -120,6 +125,9 @@ body{
     }
     .menu h3{
         display: none;
+    }
+    .menu ul{
+        padding-top: 70px;
     }
 }
 
