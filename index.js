@@ -31,4 +31,8 @@ function toggleMenu(){
         menu.style.margin = "0px";
     }
 };
-//haha javascript go brrr
+
+function bsod(){
+    image = document.getElementsByClassName("bsod")[0];
+    image.hidden = false;
+}
