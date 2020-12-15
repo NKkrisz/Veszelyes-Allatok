@@ -14,79 +14,17 @@
     <div class="menu">
         <ul>
             <h3>Veszélyes állatok</h3>
-            <button class="menu-btn menu-selected" onclick="switchTo(0);"><li>Szúnyog</li></button>
-            <button class="menu-btn" onclick="switchTo(1);"><li>Jegesmedve</li></button>
-            <button class="menu-btn" onclick="switchTo(2);"><li>Cecelégy</li></button>
-            <button class="menu-btn" onclick="switchTo(3);"><li>Elefánt</li></button>
-            <button class="menu-btn" onclick="switchTo(4);"><li>Viziló</li></button>
-            <button class="menu-btn" onclick="switchTo(5);"><li>Fekete mamba</li></button>
-            <button class="menu-btn" onclick="switchTo(6);"><li>Kúpcsoga</li></button>
-            <button class="menu-btn" onclick="switchTo(7);"><li>Nyílméregbéka</li></button>
-            <button class="menu-btn" onclick="switchTo(8);"><li>Krokodil</li></button>
-            <button class="menu-btn" onclick="switchTo(9);"><li>Kék-gyűrűs polip</li></button>
+            {% for page in pages %}
+            <button class="menu-btn {% if loop.index-1 == 0 %}menu-selected{% endif %}" onclick="switchTo({{loop.index-1}});"><li>{{page['name']}}</li></button>
+            {% endfor %}
         </ul>
         <a target="_blank" href="https://github.com/NKkrisz/Veszelyes-Allatok">Github / NKkrisz / Veszelyes-Allatok</a>
     </div>
-    <div class="content"> <!--Page 0-->
-        <p>
-            <img src="./kepek/1szunyog.png" alt="Kép: szúnyog">
-            1. Szúnyog
-        </p>
+    {% for page in pages %}
+    <div class="content"{% if not loop.index-1 == 0 %}hidden{% endif %}> <!--Page {{loop.index-1}}-->
+        {{render_template_string(page['html'])}}
     </div>
-    <div class="content" hidden> <!--Page 1-->
-        <p>
-            <img src="./kepek/2jegesmedve.png" alt="Kép: jegesmedve"> 
-            2. Jegesmedve
-        </p>
-    </div>
-    <div class="content" hidden> <!--Page 2-->
-        <p> 
-            <img src="./kepek/3legy.png" alt="Kép: légy"> 
-            3. Cecelégy
-        </p>
-    </div>
-    <div class="content" hidden> <!--Page 3-->
-        <p>
-            <img src="./kepek/4elefant.png" alt="Kép: elefánt"> 
-            4. Elefánt
-        </p>
-    </div>
-    <div class="content" hidden> <!--Page 4-->
-        <p>
-            <img src="./kepek/5vizilo.png" alt="Kép: viziló"> 
-            5. Viziló
-        </p>
-    </div>
-    <div class="content" hidden> <!--Page 5-->
-        <p>
-            <img src="./kepek/6feketemamba.png" alt="Kép: fekete mamba"> 
-            6. Fekete mamba
-        </p>
-    </div>
-    <div class="content" hidden> <!--Page 6-->
-        <p>
-            <img src="./kepek/7kupcsiga.png" alt="Kép: kúpcsiga"> 
-            7. Kúpos csiga
-        </p>
-    </div>
-    <div class="content" hidden> <!--Page 7-->
-        <p>
-            <img src="./kepek/8nyilmeregbeka.png" alt="Kép: nyílméregbéka"> 
-            8. Nyílméreg béka
-        </p>
-    </div>
-    <div class="content" hidden> <!--Page 8-->
-        <p>
-            <img src="./kepek/9krokodil.png" alt="Kép: krokodil"> 
-            9. Bordás krokodil
-        </p>
-    </div>
-    <div class="content" hidden> <!--Page 9-->
-        <p>
-            <img src="./kepek/10polip.jpg" alt="Kép: polip"> 
-            10. Kékgyűrűs polip
-        </p>
-    </div>
+    {% endfor %}
     <script src="{{ url_for('static', filename='index.js') }}"></script>
 </body>
 </html>
